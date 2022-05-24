@@ -13,7 +13,7 @@ ld -m elf_i386 tema1.o -o tema1
 
 
 ## Tema 2
-Am ales problema 20. Scopul programului este să găsească soluția aproximativă a ecuației $-380x + 28x^2 + x^3 = 0$, folosind metoda Newton-Raphson. Programul primește de la tastatură aproximarea inițială ($x_0$) și numărul de iterații (n) și afișează soluția aproximativă rezultată.
+Am ales problema 20. Scopul programului este să găsească soluția aproximativă a ecuației $-380x + 28x^2 + x^3 = 0$, folosind metoda Newton-Raphson. Programul primește de la tastatură aproximarea inițială ($x_0$) și numărul de iterații (n) și afișează soluția aproximativă rezultată. Programul identifică corect rădăcinile $0$ și $10$ (însă nu și $-38$, deoarece nu respectă condițiile inițiale pentru metoda Newton-Raphson).
 
 Programul în limbaj de asamblare este scris în _x64 NASM_, și folosește instrucțiunile specifice pentru lucrul cu numere în virgulă mobilă.
 
@@ -22,5 +22,5 @@ Programul echivalent în C++ rezolvă problema folosind thread-uri separate pent
 Pentru compilarea codului sursă assembly am folosit comenzile:
 ```
 nasm tema2.asm -o tema2.o -f elf64 -g -F dwarf
-/usr/bin/gcc tema2.0 -o tema2 -no-pie
+/usr/bin/gcc tema2.o -o tema2 -no-pie
 ```
